@@ -17,9 +17,10 @@ func init() {
 	LabCommands["sync"] = printCommand
 	LabCommands["fork"] = printCommand
 	LabCommands["pr"] = printCommand
-	LabCommands["setup"] = printCommand
+	LabCommands["setup"] = setupCommand
 	LabCommands["end"] = printCommand
 	LabCommands["start"] = printCommand
 	LabCommands["fix"] = printCommand
+	LabCommands["create"] = printCommand
 
 }

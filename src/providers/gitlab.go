@@ -28,9 +28,11 @@ func (g *Gitlab) request(url, cmd string) (results map[string]interface{}, err e
 	req.Header.Add("PRIVATE-TOKEN", g.token)
 	var r *http.Response
 	r, err = g.c.Do(req)
-	fmt.Println("=============")
-	fmt.Println(r)
-	fmt.Println("=============")
+	/*
+		fmt.Println("=============")
+		fmt.Println(r)
+		fmt.Println("=============")
+	*/
 	decoder := json.NewDecoder(r.Body)
 	var v interface{}
 	if err = decoder.Decode(&v); err == nil {
@@ -51,5 +53,9 @@ func (g *Gitlab) CurrentUser() (u string, err error) {
 			err = errors.New("result is not string type")
 		}
 	}
+	return
+}
+
+func (g *Gitlab) ForkProject() (err error) {
 	return
 }
