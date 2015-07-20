@@ -15,7 +15,7 @@ func printCommand(args ...string) {
 func init() {
 	LabCommands = make(map[string]Command)
 	LabCommands["sync"] = printCommand
-	LabCommands["fork"] = printCommand
+	LabCommands["fork"] = forkCommand
 	LabCommands["pr"] = printCommand
 	LabCommands["setup"] = setupCommand
 	LabCommands["end"] = printCommand
